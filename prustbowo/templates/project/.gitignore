@@ -1,0 +1,7 @@
+target/
+.env
+**/*.rs.bk
+/.idea
+/.vscode
+docs/swagger.json
+
