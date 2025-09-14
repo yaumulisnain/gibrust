@@ -30,7 +30,7 @@ pub fn create_project(args: CreateProjectArgs) -> Result<()> {
     // Initialize git repo
     let _ = cmd("git", ["init"]).dir(&project_dir).run();
     let _ = cmd("git", ["add", "."]).dir(&project_dir).run();
-    let _ = cmd("git", ["commit", "-m", "chore: init from prustbowo"]).dir(&project_dir).run();
+    let _ = cmd("git", ["commit", "-m", "chore: init from gibrust"]).dir(&project_dir).run();
 
     Ok(())
 }
@@ -144,8 +144,8 @@ fn replace_placeholders(root: &Path, key: &str, value: &str) -> Result<()> {
 fn register_route_and_docs(route_file: &Path, domain_name: &str) -> Result<()> {
     let content = fs::read_to_string(route_file).with_context(|| format!("read {}", route_file.display()))?;
     let mut new_content = content.clone();
-    let marker_import = "// <prustbowo:imports>";
-    let marker_routes = "// <prustbowo:routes>";
+    let marker_import = "// <gibrust:imports>";
+    let marker_routes = "// <gibrust:routes>";
     if !content.contains(marker_import) || !content.contains(marker_routes) {
         bail!("route.rs missing markers {} and {}", marker_import, marker_routes);
     }

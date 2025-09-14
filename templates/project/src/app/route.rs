@@ -2,7 +2,7 @@ use axum::{routing::get, Router};
 use utoipa::OpenApi;
 use utoipa_swagger_ui::SwaggerUi;
 
-// <prustbowo:imports>
+// <gibrust:imports>
 
 #[derive(OpenApi)]
 #[openapi(
@@ -14,7 +14,7 @@ pub struct ApiDoc;
 
 pub fn app_router(router: Router) -> Router {
     let mut router = router;
-    // <prustbowo:routes>
+    // <gibrust:routes>
     router = router.merge(SwaggerUi::new("/docs").url("/api-docs/openapi.json", ApiDoc::openapi()));
     router
 }

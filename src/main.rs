@@ -7,7 +7,7 @@ mod scaffold;
 mod templates;
 
 #[derive(Parser, Debug)]
-#[command(name = "prustbowo", version, about = "Scaffold and manage Rust REST API projects", long_about = None)]
+#[command(name = "gibrust", version, about = "Scaffold and manage Rust REST API projects", long_about = None)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,

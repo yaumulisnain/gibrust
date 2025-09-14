@@ -1,11 +1,11 @@
 [package]
-name = "prustbowo"
+name = "gibrust"
 version = "0.1.0"
 edition = "2021"
 description = "CLI to scaffold and manage Rust REST API projects with Axum, Utoipa, and Diesel"
 license = "MIT"
-repository = "https://example.com/prustbowo"
-homepage = "https://example.com/prustbowo"
+repository = "https://example.com/gibrust"
+homepage = "https://example.com/gibrust"
 
 [dependencies]
 anyhow = "1.0"
