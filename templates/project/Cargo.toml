@@ -1,0 +1,37 @@
+[package]
+name = "__PROJECT_NAME__"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "__CRATE_IDENT__"
+path = "src/lib.rs"
+
+[[bin]]
+name = "server"
+path = "cmd/main.rs"
+
+[[bin]]
+name = "export-openapi"
+path = "cmd/export_openapi.rs"
+
+[[bin]]
+name = "migrate"
+path = "cmd/migrate.rs"
+
+[dependencies]
+anyhow = "1.0"
+axum = { version = "0.7", features = ["macros", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.39", features = ["rt-multi-thread", "macros"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+utoipa = { version = "4", features = ["axum_extras", "chrono"] }
+utoipa-swagger-ui = { version = "6", features = ["axum"] }
+diesel = { version = "=2.2.4", features = ["postgres", "r2d2", "chrono", "uuid"] }
+diesel_migrations = "=2.2.0"
+dotenvy = "0.15"
+uuid = { version = "1", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+
