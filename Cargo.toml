@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 description = "CLI to scaffold and manage Rust REST API projects with Axum, Utoipa, and Diesel"
 license = "MIT"
-repository = "https://example.com/gibrust"
-homepage = "https://example.com/gibrust"
+repository = "https://github.com/yaumulisnain/gibrust"
+homepage = "https://github.com/yaumulisnain/gibrust"
 
 [dependencies]
 anyhow = "1.0"
